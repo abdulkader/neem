@@ -1,0 +1,25 @@
+{
+  "name": "neem",
+  "version": "1.0.0",
+  "description": "Node JS Elastic Express MySQL Boilerplate",
+  "main": "src",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/abdulkaderptp/neem.git"
+  },
+  "keywords": [
+    "node",
+    "express",
+    "mysql",
+    "elasticsearch"
+  ],
+  "author": "Abdul Kader <ak@itsak.in>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/abdulkaderptp/neem/issues"
+  },
+  "homepage": "https://github.com/abdulkaderptp/neem#readme"
+}
