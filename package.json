@@ -4,11 +4,29 @@
   "description": "Node JS Elastic Express MySQL Boilerplate",
   "main": "src",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "nodemon -w src --exec \"babel-node src --presets es2015,stage-0\"",
+    "build": "babel src -s -D -d dist --presets es2015,stage-0",
+    "start": "node dist",
+    "prestart": "npm run -s build",
+    "test": "eslint src"
   },
   "repository": {
     "type": "git",
     "url": "git+ssh://git@github.com/abdulkaderptp/neem.git"
+  },
+  "eslintConfig": {
+    "extends": "eslint:recommended",
+    "parserOptions": {
+      "ecmaVersion": 7,
+      "sourceType": "module"
+    },
+    "env": {
+      "node": true
+    },
+    "rules": {
+      "no-console": 0,
+      "no-unused-vars": 1
+    }
   },
   "keywords": [
     "node",
@@ -21,5 +39,15 @@
   "bugs": {
     "url": "https://github.com/abdulkaderptp/neem/issues"
   },
-  "homepage": "https://github.com/abdulkaderptp/neem#readme"
+  "homepage": "https://github.com/abdulkaderptp/neem#readme",
+  "devDependencies": {
+    "nodemon": "^1.18.3"
+  },
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "dotenv": "^6.0.0",
+    "elasticsearch": "^15.1.1",
+    "express": "^4.16.3",
+    "mysql": "^2.16.0"
+  }
 }
